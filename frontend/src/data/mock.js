@@ -80,15 +80,19 @@ export const projects = [
     description: "Sistema com horários personalizados para gerenciamento de agendamentos",
     technologies: ["PHP", "MySQL", "HTML", "CSS"],
     status: "Concluído",
-    link: "#" // Link será adicionado futuramente
+    link: "https://github.com/Ange-lo06/Agendamento",
+    hasDemo: false,
+    hasGithub: true
   },
   {
     id: 2,
-    title: "Aplicações Web",
-    description: "Desenvolvimento de aplicações web utilizando tecnologias front-end e back-end",
-    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+    title: "Sistema de Estoque",
+    description: "Sistema de controle de estoque desenvolvido com Python Flask para gerenciamento de produtos e inventário",
+    technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
     status: "Concluído",
-    link: "#"
+    link: "https://github.com/Ange-lo06/Estoque_Flask",
+    hasDemo: false,
+    hasGithub: true
   },
   {
     id: 3,
@@ -96,6 +100,8 @@ export const projects = [
     description: "Ferramenta de produtividade para gerenciamento de tarefas",
     technologies: ["JavaScript", "HTML", "CSS"],
     status: "Concluído",
-    link: "#"
+    link: "#",
+    hasDemo: false,
+    hasGithub: false
   }
 ];
