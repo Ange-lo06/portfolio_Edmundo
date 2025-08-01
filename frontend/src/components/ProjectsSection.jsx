@@ -71,25 +71,43 @@ const ProjectsSection = () => {
                       <Button 
                         variant="outline" 
                         className="btn-primary flex items-center space-x-2"
-                        disabled={project.link === '#'}
+                        disabled={!project.hasDemo}
                       >
                         <ExternalLink size={16} />
                         <span>Ver Demo</span>
                       </Button>
-                      <Button 
-                        variant="outline" 
-                        className="btn-primary flex items-center space-x-2"
-                        disabled={project.link === '#'}
-                      >
-                        <Github size={16} />
-                        <span>Ver Código</span>
-                      </Button>
+                      {project.hasGithub ? (
+                        <Button 
+                          variant="outline" 
+                          className="btn-primary flex items-center space-x-2"
+                          onClick={() => window.open(project.link, '_blank')}
+                        >
+                          <Github size={16} />
+                          <span>Ver Código</span>
+                        </Button>
+                      ) : (
+                        <Button 
+                          variant="outline" 
+                          className="btn-primary flex items-center space-x-2"
+                          disabled={true}
+                        >
+                          <Github size={16} />
+                          <span>Ver Código</span>
+                        </Button>
+                      )}
                     </div>
 
-                    {project.link === '#' && (
+                    {!project.hasGithub && (
                       <p className="text-xs text-secondary mt-3 flex items-center">
                         <Settings size={14} className="mr-1" />
-                        Links serão adicionados em breve
+                        Link será adicionado em breve
+                      </p>
+                    )}
+                    
+                    {project.hasDemo === false && project.hasGithub && (
+                      <p className="text-xs text-secondary mt-3 flex items-center">
+                        <Settings size={14} className="mr-1" />
+                        Demo não disponível - Repositório disponível no GitHub
                       </p>
                     )}
                   </CardContent>
