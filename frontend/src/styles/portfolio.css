@@ -1,0 +1,257 @@
+/* Portfolio Custom Styles - Minimalist Red Accent */
+:root {
+  /* Monochromatic Base */
+  --color-background: #F2F2F2;
+  --bg-white: #FFFFFF;
+  --text-primary: #232323;
+  --text-secondary: rgba(35, 35, 35, 0.7);
+  --border-color: #232323;
+  --border-light: rgba(35, 35, 35, 0.1);
+  
+  /* Red Accent System */
+  --accent-primary: #FF3838;
+  --accent-hover: #E62E2E;
+  --accent-active: #CC2424;
+  --accent-foreground: #FFFFFF;
+  
+  /* Grid System */
+  --grid-unit: 47.6px;
+}
+
+/* Typography System */
+.hero-title { 
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; 
+  font-size: clamp(40px, 8vw, 80px); 
+  font-weight: 700; 
+  color: var(--text-primary); 
+  line-height: 1.1; 
+  letter-spacing: -0.02em;
+}
+
+.header-logo {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.section-title { 
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; 
+  font-size: clamp(28px, 5vw, 48px); 
+  font-weight: 600; 
+  color: var(--text-primary); 
+  line-height: 1.2; 
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+}
+
+.text-large { 
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; 
+  font-size: clamp(18px, 3vw, 24px); 
+  font-weight: 400; 
+  color: var(--text-primary); 
+  line-height: 1.4;
+}
+
+.text-body { 
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; 
+  font-size: clamp(14px, 2vw, 16px); 
+  font-weight: 400; 
+  color: var(--text-primary); 
+  line-height: 1.5;
+}
+
+.label { 
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; 
+  font-size: clamp(12px, 1.5vw, 14px); 
+  font-weight: 500; 
+  color: var(--text-secondary); 
+  line-height: 1.2; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em;
+}
+
+/* Component Styles */
+.btn-primary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  padding: 12px 24px;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover {
+  background: rgba(35, 35, 35, 0.05);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: var(--accent-primary);
+  border: none;
+  border-radius: 0;
+  padding: 12px 24px;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-foreground);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.btn-accent:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.card-minimal {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 0;
+  padding: 24px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.card-minimal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(35, 35, 35, 0.08);
+}
+
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: all 0.15s ease;
+  letter-spacing: 0.01em;
+  border-radius: 0;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--accent-primary);
+  transition: all 0.2s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Grid Background */
+.grid-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background);
+  background-image: 
+    linear-gradient(to right, var(--border-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
+  background-size: 47.6px 47.6px;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Layout */
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-spacing {
+  padding: calc(var(--grid-unit) * 2) 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 0 16px;
+  }
+  
+  .section-spacing {
+    padding: calc(var(--grid-unit) * 1) 0;
+  }
+  
+  .btn-primary,
+  .btn-accent {
+    width: 100%;
+    min-height: 52px;
+  }
+  
+  .hero-title {
+    font-size: 40px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* Accent elements */
+.accent-line {
+  width: 60px;
+  height: 3px;
+  background: var(--accent-primary);
+  margin: 16px 0;
+}
+
+.text-accent {
+  color: var(--accent-primary);
+}
