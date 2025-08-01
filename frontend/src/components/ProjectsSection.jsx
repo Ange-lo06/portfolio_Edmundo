@@ -125,7 +125,7 @@ const ProjectsSection = () => {
                 Estou sempre trabalhando em novos projetos e aprimorando minhas habilidades. 
                 Em breve, mais trabalhos serão adicionados ao portfólio.
               </p>
-              <Button className="btn-accent">
+              <Button className="btn-accent" onClick={() => window.open('https://github.com/Ange-lo06', '_blank')}>
                 Ver Repositório GitHub
               </Button>
             </div>
